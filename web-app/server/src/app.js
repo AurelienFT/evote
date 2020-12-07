@@ -158,10 +158,8 @@ app.post('/queryByKey', async (req, res) => {
   let response = await network.invoke(networkObj, true, 'readMyAsset', req.body.key);
   response = JSON.parse(response);
   if (response.error) {
-    console.log('inside eRRRRR');
-    res.send(response.error);
+    res.send({error: response.error});
   } else {
-    console.log('inside ELSE');
     res.send(response);
   }
 });

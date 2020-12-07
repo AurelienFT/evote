@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    margin-bottom: 4em;
+    font-size: 50px;
+}
+
+.enterIdTitle {
+    text-align: center;
+}
+
+.rowInputID {
+    margin-bottom: 4em;
+}
+
+.colInputID {
+    text-align: center;
+}
+
+.inputID {
+    width: 200px;
+}
