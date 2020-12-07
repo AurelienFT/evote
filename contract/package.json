@@ -1,6 +1,6 @@
 {
     "name": "voterContract",
-    "version": "7.0.5",
+    "version": "7.0.8",
     "description": "My Smart Contract",
     "main": "index.js",
     "engines": {
@@ -12,14 +12,14 @@
         "start": "fabric-chaincode-node start"
     },
     "env": {
-        "CORE_CHAINCODE_ID_NAME": "voterContract:7.0.5"
+        "CORE_CHAINCODE_ID_NAME": "voterContract:7.0.8"
     },
     "engineStrict": true,
     "author": "John Doe",
     "license": "Apache-2.0",
     "dependencies": {
-        "fabric-contract-api": "1.4.1",
-        "fabric-shim": "^1.4.1",
+        "fabric-contract-api": "1.4.2",
+        "fabric-shim": "^1.4.2",
         "mem": "^5.1.1",
         "os-locale": "^4.0.0"
     },

@@ -21,6 +21,7 @@ class Voter {
       // TODO: Change to allow multiple votes
       this.ballotCreated = false;
       this.type = 'voter';
+      this.groups = [];
       if (this.__isContract) {
         delete this.__isContract;
       }

@@ -156,6 +156,7 @@ app.post('/queryByKey', async (req, res) => {
   let networkObj = await network.connectToNetwork(appAdmin);
   console.log('after network OBj');
   let response = await network.invoke(networkObj, true, 'readMyAsset', req.body.key);
+  console.log(response);
   response = JSON.parse(response);
   if (response.error) {
     res.send({error: response.error});

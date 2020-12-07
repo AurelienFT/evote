@@ -1,22 +1,36 @@
 import { useState } from 'react';
-import { Typography, Button, Input } from 'antd';
+import { Typography, Button, Input, Row, Col } from 'antd';
 import './Home.css';
-import { Row, Col } from 'antd';
-import {queryByKey} from "../../services/apiService";
+import { Redirect } from 'react-router-dom';
+import { queryByKey } from "../../services/apiService";
+import { useCookies } from 'react-cookie';
 
 const { Title, Text } = Typography;
 const { Search } = Input;
 
 function Home() {
     const [displayError, setDisplayError] = useState(false);
+    const [redirect, setRedirect] = useState(null);
+    const [cookies, setCookie] = useCookies(['voterData']);
+
+    if (redirect) {
+        return <Redirect  to={{
+            pathname: "/profile",
+          }} />
+    }
+    if (cookies['voterdata'] && cookies['voterdata'].voterId) {
+        return <Redirect  to={{
+            pathname: "/profile",
+          }} /> 
+    }
     const onSearch = value => {
-        queryByKey(value).then(function(value) {
-        if (value.data.error) {
-            setDisplayError(true);
-            console.log("lul")
-        } else {
-            console.log("ok")
-        }
+        queryByKey(value).then(function (value) {
+            if (value.data.error) {
+                setDisplayError(true);
+            } else {
+                setCookie('voterdata', value.data);
+                setRedirect(true);
+            }
         });
     };
     return (
@@ -30,7 +44,9 @@ function Home() {
                     <Typography className="enterIdTitle">
                         <Title>Enter your ID</Title>
                     </Typography>
-                    <Search placeholder="ID" className="inputID" size="large" onSearch={onSearch} />
+                    <div>
+                        <Search placeholder="ID" className="inputID" size="large" onSearch={onSearch} />
+                    </div>
                     {displayError ? <Text type="danger">No voter with this ID</Text> : <div></div>}
                 </Col>
                 <Col span={8} />
