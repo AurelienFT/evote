@@ -15,9 +15,9 @@ class VotableItem {
    * @param voterId - the unique Id which corresponds to a registered voter
    * @returns - registrar object
    */
-  constructor(ctx, votableId, description) {
-
-    this.votableId = votableId;
+  constructor(ctx, description, electionId) {
+    this.electionId = electionId;
+    this.votableId = 'item' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     this.description = description;
     this.count = 0;
     this.type = 'votableItem';

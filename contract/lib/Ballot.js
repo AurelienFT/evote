@@ -22,7 +22,7 @@ class Ballot {
       this.election = election;
       this.voterId = voterId;
       this.ballotCast = false;
-      this.ballotId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      this.ballotId = 'ballot' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
       this.type = 'ballot';
       if (this.__isContract) {
         delete this.__isContract;

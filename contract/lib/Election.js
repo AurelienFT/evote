@@ -34,7 +34,7 @@ class Election {
    */
   constructor(name, startDate, endDate, groupId) {
     
-    this.electionId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    this.electionId = 'election' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
     if (this.validateElection(this.electionId)) {
 

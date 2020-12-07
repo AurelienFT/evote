@@ -18,6 +18,7 @@ class Voter {
     if (this.validateVoter(voterId)) {
 
       this.voterId = voterId;
+      // TODO: Change to allow multiple votes
       this.ballotCreated = false;
       this.type = 'voter';
       if (this.__isContract) {

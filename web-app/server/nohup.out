@@ -1,0 +1,2919 @@
+/home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js:55
+    throw error;
+    ^
+
+Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: node-v83-linux-x64-glibc
+Found: [node-v64-linux-x64-glibc]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module '/home/ubuntu/evote/web-app/server/node_modules/grpc/src/node/extension_binary/node-v83-linux-x64-glibc/grpc_node.node'
+Require stack:
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/client_interceptors.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/client.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/index.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/ProtoLoader.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/client-utils.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/Client.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/index.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/lib/gateway.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/index.js
+- /home/ubuntu/evote/web-app/server/src/fabric/network.js
+- /home/ubuntu/evote/web-app/server/src/app.js
+    at Object.<anonymous> (/home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js:53:17)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (/home/ubuntu/evote/web-app/server/node_modules/grpc/src/client_interceptors.js:144:12)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10) {
+  code: 'MODULE_NOT_FOUND'
+}
+/home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js:55
+    throw error;
+    ^
+
+Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: node-v83-linux-x64-glibc
+Found: [node-v64-linux-x64-glibc]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module '/home/ubuntu/evote/web-app/server/node_modules/grpc/src/node/extension_binary/node-v83-linux-x64-glibc/grpc_node.node'
+Require stack:
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/client_interceptors.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/src/client.js
+- /home/ubuntu/evote/web-app/server/node_modules/grpc/index.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/ProtoLoader.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/client-utils.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/lib/Client.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/node_modules/fabric-client/index.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/lib/gateway.js
+- /home/ubuntu/evote/web-app/server/node_modules/fabric-network/index.js
+- /home/ubuntu/evote/web-app/server/src/fabric/network.js
+- /home/ubuntu/evote/web-app/server/src/app.js
+    at Object.<anonymous> (/home/ubuntu/evote/web-app/server/node_modules/grpc/src/grpc_extension.js:53:17)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Module.require (internal/modules/cjs/loader.js:952:19)
+    at require (internal/modules/cjs/helpers.js:88:18)
+    at Object.<anonymous> (/home/ubuntu/evote/web-app/server/node_modules/grpc/src/client_interceptors.js:144:12)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10) {
+  code: 'MODULE_NOT_FOUND'
+}
+90.91.17.84 - - [02/Dec/2020:09:52:15 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 OPR/72.0.3815.207"
+90.91.17.84 - - [02/Dec/2020:09:52:18 +0000] "GET / HTTP/1.1" 404 139 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 OPR/72.0.3815.207"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: votableItem
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606902759663,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606902759663,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+votableItem
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 44 65 6d 6f 63 72 61 74 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c 22 63 6f 75 6e 74 5c 22 3a 30 2c 5c 22 ... >
+Transaction queryByObjectType with args votableItem has been evaluated
+[{"Key":"Democrat","Record":{"count":0,"description":"Joe Biden (Democrat)","type":"votableItem","votableId":"Democrat"}},{"Key":"Green","Record":{"count":0,"description":"TBA (Green)","type":"votableItem","votableId":"Green"}},{"Key":"Independent","Record":{"count":0,"description":"TBA (Independent)","type":"votableItem","votableId":"Independent"}},{"Key":"Libertarian","Record":{"count":1,"description":"TBA (Libertarian)","type":"votableItem","votableId":"Libertarian"}},{"Key":"Republican","Record":{"count":0,"description":"Donald Trump (Republican)","type":"votableItem","votableId":"Republican"}}]
+91.175.138.205 - - [02/Dec/2020:09:52:39 +0000] "GET /getCurrentStanding HTTP/1.1" 200 606 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryAll, args: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606902762711,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606902762711,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 38 69 67 6e 6c 71 64 65 69 6b 6f 6d 39 71 32 78 75 36 34 6b 65 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryAll without args has been evaluated
+91.175.138.205 - - [02/Dec/2020:09:52:42 +0000] "GET /queryAll HTTP/1.1" 200 4074 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+83.97.20.21 - - [02/Dec/2020:09:57:54 +0000] "GET / HTTP/1.0" 404 139 "-" "-"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: votableItem
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904114111,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904114111,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+votableItem
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 44 65 6d 6f 63 72 61 74 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c 22 63 6f 75 6e 74 5c 22 3a 30 2c 5c 22 ... >
+Transaction queryByObjectType with args votableItem has been evaluated
+[{"Key":"Democrat","Record":{"count":0,"description":"Joe Biden (Democrat)","type":"votableItem","votableId":"Democrat"}},{"Key":"Green","Record":{"count":0,"description":"TBA (Green)","type":"votableItem","votableId":"Green"}},{"Key":"Independent","Record":{"count":0,"description":"TBA (Independent)","type":"votableItem","votableId":"Independent"}},{"Key":"Libertarian","Record":{"count":1,"description":"TBA (Libertarian)","type":"votableItem","votableId":"Libertarian"}},{"Key":"Republican","Record":{"count":0,"description":"Donald Trump (Republican)","type":"votableItem","votableId":"Republican"}}]
+91.175.138.205 - - [02/Dec/2020:10:15:14 +0000] "GET /getCurrentStanding HTTP/1.1" 304 - "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryAll, args: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904122254,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904122254,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 38 69 67 6e 6c 71 64 65 69 6b 6f 6d 39 71 32 78 75 36 34 6b 65 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryAll without args has been evaluated
+91.175.138.205 - - [02/Dec/2020:10:15:22 +0000] "GET /queryAll HTTP/1.1" 304 - "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+91.175.138.205 - - [02/Dec/2020:10:26:40 +0000] "OPTIONS /registerVoter HTTP/1.1" 204 0 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+req.body: 
+{ voterId: 'E5678',
+  registrarId: 'SanFransco',
+  firstName: 'FOUCAULT',
+  lastName: 'Aurelien' }
+registrarId
+SanFransco
+voterId 
+E5678
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+AdminIdentity: + {"name":"admin","mspid":"Org1MSP","roles":null,"affiliation":"","enrollmentSecret":"","enrollment":{"signingIdentity":"7b2cb03d4362b7cb1c38f1f85e9e7b1210c449b35f635f3c3da522dc79c80b33","identity":{"certificate":"-----BEGIN CERTIFICATE-----\nMIICWjCCAgGgAwIBAgIUPK9QR9V1031s1SwldjbLRTG5xz0wCgYIKoZIzj0EAwIw\nfzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNh\nbiBGcmFuY2lzY28xHzAdBgNVBAoTFkludGVybmV0IFdpZGdldHMsIEluYy4xDDAK\nBgNVBAsTA1dXVzEUMBIGA1UEAxMLZXhhbXBsZS5jb20wHhcNMjAxMjAxMTEzNjAw\nWhcNMjExMDExMTkzMTAwWjBdMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGgg\nQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZjbGllbnQx\nDjAMBgNVBAMTBWFkbWluMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQiasQ4q4\n8mXMqQ1lAXcqK8nzrHGjYDc+Gsom0e4KZk3Z/To+CTGmI1IJi0NNPlOdQ30bIjjT\nj5ultOpnyq3CPaN9MHswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAwHQYD\nVR0OBBYEFLOHQs8U1SIwwZTfSr5LF6cicp9QMB8GA1UdIwQYMBaAFBdnQj2qnoI/\nxMUdn1vDmdG1nEgQMBsGA1UdEQQUMBKCEGlwLTE3Mi0zMS0zMC0xMDEwCgYIKoZI\nzj0EAwIDRwAwRAIgQxoSa7JquGUMTz3pUNm1MrkMpxKtFy7tzdm4/luZaMICIGzy\npFegfDajYL3muDxkLoyrDoI/c73zC/l8irnWsHBg\n-----END CERTIFICATE-----"}}}
+Successfully registered voter FOUCAULT Aurelien. Use voterId E5678 to login above.
+response from registerVoter: 
+Successfully registered voter FOUCAULT Aurelien. Use voterId E5678 to login above.
+req.body.voterId
+E5678
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+E5678
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+networkobj: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+network obj
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside invoke
+isQuery: false, func: createVoter, args: {"voterId":"E5678","registrarId":"SanFransco","firstName":"FOUCAULT","lastName":"Aurelien"}
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+notQuery
+notQuery, args
+$$$$$$$$$$$$$ args: 
+[ '{"voterId":"E5678","registrarId":"SanFransco","firstName":"FOUCAULT","lastName":"Aurelien"}' ]
+createVoter
+object
+{ voterId: 'E5678',
+  registrarId: 'SanFransco',
+  firstName: 'FOUCAULT',
+  lastName: 'Aurelien' }
+'{"voterId":"E5678","registrarId":"SanFransco","firstName":"FOUCAULT","lastName":"Aurelien"}'
+before submit
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904800576,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+after submit
+<Buffer 22 76 6f 74 65 72 20 77 69 74 68 20 76 6f 74 65 72 49 64 20 45 35 36 37 38 20 69 73 20 75 70 64 61 74 65 64 20 69 6e 20 74 68 65 20 77 6f 72 6c 64 20 ... >
+Transaction createVoter with args {"voterId":"E5678","registrarId":"SanFransco","firstName":"FOUCAULT","lastName":"Aurelien"} has been submitted
+after network.invoke 
+91.175.138.205 - - [02/Dec/2020:10:26:42 +0000] "POST /registerVoter HTTP/1.1" 200 83 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+91.175.138.205 - - [02/Dec/2020:10:27:00 +0000] "OPTIONS /validateVoter HTTP/1.1" 204 0 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+req.body: 
+{ voterId: 'E5678' }
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+E5678
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+networkobj: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904821026,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904821026,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside invoke
+isQuery: true, func: readMyAsset, args: E5678
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904821026,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904821026,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+E5678
+<Buffer 7b 22 62 61 6c 6c 6f 74 22 3a 22 7a 6f 78 75 78 75 73 6e 62 78 79 34 64 63 7a 6b 66 36 37 37 69 22 2c 22 62 61 6c 6c 6f 74 43 72 65 61 74 65 64 22 3a ... >
+Transaction readMyAsset with args E5678 has been evaluated
+after network.invoke 
+91.175.138.205 - - [02/Dec/2020:10:27:01 +0000] "POST /validateVoter HTTP/1.1" 200 160 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+91.175.138.205 - - [02/Dec/2020:10:27:09 +0000] "OPTIONS /queryWithQueryString HTTP/1.1" 204 0 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: election
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829544,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829544,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+election
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 38 69 67 6e 6c 71 64 65 69 6b 6f 6d 39 71 32 78 75 36 34 6b 65 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryByObjectType with args election has been evaluated
+91.175.138.205 - - [02/Dec/2020:10:27:09 +0000] "POST /queryWithQueryString HTTP/1.1" 200 247 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+91.175.138.205 - - [02/Dec/2020:10:27:09 +0000] "OPTIONS /castBallot HTTP/1.1" 204 0 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+E5678
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+util inspecting
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+req.body
+{"electionId":"8ignlqdeikom9q2xu64ke","voterId":"E5678","picked":"Democrat"}
+inside invoke
+isQuery: false, func: castVote, args: {"electionId":"8ignlqdeikom9q2xu64ke","voterId":"E5678","picked":"Democrat"}
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+notQuery
+notQuery, args
+$$$$$$$$$$$$$ args: 
+[ '{"electionId":"8ignlqdeikom9q2xu64ke","voterId":"E5678","picked":"Democrat"}' ]
+castVote
+object
+{ electionId: '8ignlqdeikom9q2xu64ke',
+  voterId: 'E5678',
+  picked: 'Democrat' }
+'{"electionId":"8ignlqdeikom9q2xu64ke","voterId":"E5678","picked":"Democrat"}'
+before submit
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904829727,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'E5678' },
+     currentIdentity:
+      User {
+        _name: 'E5678',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+after submit
+<Buffer 7b 22 62 61 6c 6c 6f 74 22 3a 22 7a 6f 78 75 78 75 73 6e 62 78 79 34 64 63 7a 6b 66 36 37 37 69 22 2c 22 62 61 6c 6c 6f 74 43 72 65 61 74 65 64 22 3a ... >
+Transaction castVote with args {"electionId":"8ignlqdeikom9q2xu64ke","voterId":"E5678","picked":"Democrat"} has been submitted
+response: 
+<Buffer 7b 22 62 61 6c 6c 6f 74 22 3a 22 7a 6f 78 75 78 75 73 6e 62 78 79 34 64 63 7a 6b 66 36 37 37 69 22 2c 22 62 61 6c 6c 6f 74 43 72 65 61 74 65 64 22 3a ... >
+91.175.138.205 - - [02/Dec/2020:10:27:11 +0000] "POST /castBallot HTTP/1.1" 200 198 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: votableItem
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904839248,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904839248,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+votableItem
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 44 65 6d 6f 63 72 61 74 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c 22 63 6f 75 6e 74 5c 22 3a 31 2c 5c 22 ... >
+Transaction queryByObjectType with args votableItem has been evaluated
+[{"Key":"Democrat","Record":{"count":1,"description":"Joe Biden (Democrat)","type":"votableItem","votableId":"Democrat"}},{"Key":"Green","Record":{"count":0,"description":"TBA (Green)","type":"votableItem","votableId":"Green"}},{"Key":"Independent","Record":{"count":0,"description":"TBA (Independent)","type":"votableItem","votableId":"Independent"}},{"Key":"Libertarian","Record":{"count":1,"description":"TBA (Libertarian)","type":"votableItem","votableId":"Libertarian"}},{"Key":"Republican","Record":{"count":0,"description":"Donald Trump (Republican)","type":"votableItem","votableId":"Republican"}}]
+91.175.138.205 - - [02/Dec/2020:10:27:19 +0000] "GET /getCurrentStanding HTTP/1.1" 200 606 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: votableItem
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904841091,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904841091,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+votableItem
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 44 65 6d 6f 63 72 61 74 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c 22 63 6f 75 6e 74 5c 22 3a 31 2c 5c 22 ... >
+Transaction queryByObjectType with args votableItem has been evaluated
+[{"Key":"Democrat","Record":{"count":1,"description":"Joe Biden (Democrat)","type":"votableItem","votableId":"Democrat"}},{"Key":"Green","Record":{"count":0,"description":"TBA (Green)","type":"votableItem","votableId":"Green"}},{"Key":"Independent","Record":{"count":0,"description":"TBA (Independent)","type":"votableItem","votableId":"Independent"}},{"Key":"Libertarian","Record":{"count":1,"description":"TBA (Libertarian)","type":"votableItem","votableId":"Libertarian"}},{"Key":"Republican","Record":{"count":0,"description":"Donald Trump (Republican)","type":"votableItem","votableId":"Republican"}}]
+91.175.138.205 - - [02/Dec/2020:10:27:21 +0000] "GET /getCurrentStanding HTTP/1.1" 304 - "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryAll, args: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904858976,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606904858976,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 38 69 67 6e 6c 71 64 65 69 6b 6f 6d 39 71 32 78 75 36 34 6b 65 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryAll without args has been evaluated
+91.175.138.205 - - [02/Dec/2020:10:27:39 +0000] "GET /queryAll HTTP/1.1" 200 5308 "http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: votableItem
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606907990254,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606907990254,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+votableItem
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 44 65 6d 6f 63 72 61 74 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c 22 63 6f 75 6e 74 5c 22 3a 31 2c 5c 22 ... >
+Transaction queryByObjectType with args votableItem has been evaluated
+[{"Key":"Democrat","Record":{"count":1,"description":"Joe Biden (Democrat)","type":"votableItem","votableId":"Democrat"}},{"Key":"Green","Record":{"count":0,"description":"TBA (Green)","type":"votableItem","votableId":"Green"}},{"Key":"Independent","Record":{"count":0,"description":"TBA (Independent)","type":"votableItem","votableId":"Independent"}},{"Key":"Libertarian","Record":{"count":1,"description":"TBA (Libertarian)","type":"votableItem","votableId":"Libertarian"}},{"Key":"Republican","Record":{"count":0,"description":"Donald Trump (Republican)","type":"votableItem","votableId":"Republican"}}]
+91.175.138.205 - - [02/Dec/2020:11:19:50 +0000] "GET /getCurrentStanding HTTP/1.1" 200 606 "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+91.175.138.205 - - [02/Dec/2020:11:20:00 +0000] "OPTIONS /queryWithQueryString HTTP/1.1" 204 0 "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryByObjectType, args: ballot
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606908000999,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606908000999,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+inside isQuery, args
+ballot
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 68 70 74 69 6b 6a 6c 30 35 75 62 64 6b 66 68 6f 69 6a 75 34 68 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryByObjectType with args ballot has been evaluated
+91.175.138.205 - - [02/Dec/2020:11:20:01 +0000] "POST /queryWithQueryString HTTP/1.1" 200 3664 "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+Wallet path: /home/ubuntu/evote/web-app/server/wallet
+userName: 
+admin
+wallet: 
+FileSystemWallet {
+  storesInitialized: false,
+  walletMixin: X509WalletMixin {},
+  path: '/home/ubuntu/evote/web-app/server/wallet' }
+ccp: 
+{ certificateAuthorities: { Org1CA: { caName: 'ca', url: 'http://localhost:17050' } },
+  client:
+   { connection: { timeout: [Object] }, organization: 'Org1MSP' },
+  name: 'Org1',
+  organizations:
+   { Org1MSP:
+      { certificateAuthorities: [Array],
+        mspid: 'Org1MSP',
+        peers: [Array] } },
+  peers: { Org1Peer1: { url: 'grpc://localhost:17051' } },
+  version: '1.0.0' }
+before gateway.connect: 
+Connected to mychannel. 
+Done connecting to network.
+inside invoke
+isQuery: true, func: queryAll, args: 
+{ contract:
+   Contract {
+     network:
+      Network {
+        gateway: [Gateway],
+        channel: [Channel],
+        contracts: [Map],
+        initialized: true,
+        listeners: Map {},
+        queryHandler: [SingleQueryHandler],
+        checkpointer: [Object],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        eventHubManager: [EventHubManager] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606908026037,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     chaincodeId: 'voterContract',
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     namespace: '',
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} } },
+  network:
+   Network {
+     gateway:
+      Gateway {
+        client: [Client],
+        wallet: null,
+        networks: [Map],
+        options: [Object],
+        currentIdentity: [User] },
+     channel:
+      Channel {
+        _name: 'mychannel',
+        _channel_peers: [Map],
+        _anchor_peers: [],
+        _orderers: [Map],
+        _kafka_brokers: [],
+        _clientContext: [Client],
+        _msp_manager: [MSPManager],
+        _discovery_interests: [Map],
+        _discovery_results: [Object],
+        _last_discover_timestamp: 1606908026037,
+        _use_discovery: true,
+        _as_localhost: true,
+        _endorsement_handler: [DiscoveryEndorsementHandler],
+        _commit_handler: [BasicCommitHandler],
+        _last_refresh_request: [Object] },
+     contracts: Map { 'voterContract:' => [Contract] },
+     initialized: true,
+     listeners: Map {},
+     queryHandler: SingleQueryHandler { _peers: [Array], _currentPeerIndex: 0 },
+     checkpointer:
+      { factory: [Function: FILE_SYSTEM_CHECKPOINTER], options: {} },
+     eventHubSelectionStrategy:
+      RoundRobinEventHubSelectionStrategy { peers: [Array], lastPeerIdx: null },
+     eventHubManager:
+      EventHubManager {
+        channel: [Channel],
+        eventHubFactory: [EventHubFactory],
+        eventHubSelectionStrategy: [RoundRobinEventHubSelectionStrategy],
+        newEventHubs: [] } },
+  gateway:
+   Gateway {
+     client:
+      Client {
+        _cryptoSuite: [CryptoSuite_ECDSA_AES],
+        _clientConfigMspid: 'Org1MSP',
+        _stateStore: [FileKeyValueStore],
+        _userContext: [User],
+        _network_config: [NetworkConfig_1_0],
+        _msps: Map {},
+        _devMode: false,
+        _adminSigningIdentity: null,
+        _tls_mutual: [Object],
+        _organizations: Map {},
+        _certificateAuthorities: Map {},
+        _channels: [Map],
+        _connection_options: {} },
+     wallet: null,
+     networks: Map { 'mychannel' => [Network] },
+     options:
+      { queryHandlerOptions: [Object],
+        eventHandlerOptions: [Object],
+        discovery: [Object],
+        checkpointer: [Object],
+        eventHubSelectionOptions: [Object],
+        wallet: [FileSystemWallet],
+        identity: 'admin' },
+     currentIdentity:
+      User {
+        _name: 'admin',
+        _roles: null,
+        _affiliation: '',
+        _enrollmentSecret: '',
+        _identity: [Identity],
+        _signingIdentity: [SigningIdentity],
+        _mspId: 'Org1MSP',
+        _cryptoSuite: [CryptoSuite_ECDSA_AES] } } }
+inside isQuery
+<Buffer 22 5b 7b 5c 22 4b 65 79 5c 22 3a 5c 22 38 69 67 6e 6c 71 64 65 69 6b 6f 6d 39 71 32 78 75 36 34 6b 65 5c 22 2c 5c 22 52 65 63 6f 72 64 5c 22 3a 7b 5c ... >
+Transaction queryAll without args has been evaluated
+91.175.138.205 - - [02/Dec/2020:11:20:26 +0000] "GET /queryAll HTTP/1.1" 200 5308 "http://vote.oursin.eu:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36"
+64.31.8.10 - - [02/Dec/2020:11:43:01 +0000] "GET http://example.com/ HTTP/1.1" 404 139 "-" "Go-http-client/1.1"

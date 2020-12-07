@@ -65,7 +65,6 @@ app.post('/castBallot', async (req, res) => {
 
 //query for certain objects within the world state
 app.post('/queryWithQueryString', async (req, res) => {
-
   let networkObj = await network.connectToNetwork(appAdmin);
   let response = await network.invoke(networkObj, true, 'queryByObjectType', req.body.selected);
   let parsedResponse = await JSON.parse(response);
@@ -168,4 +167,4 @@ app.post('/queryByKey', async (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 8081);
+app.listen(process.env.PORT || 8081, '0.0.0.0');
