@@ -32,7 +32,7 @@ class Election {
    * @param voterId - the unique Id which corresponds to a registered voter
    * @returns - registrar object
    */
-  constructor(name, country, year, startDate, endDate) {
+  constructor(name, startDate, endDate, groupId) {
     
     this.electionId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
@@ -40,10 +40,9 @@ class Election {
 
       //create the election object
       this.name = name;
-      this.country = country;
-      this.year = year;
       this.startDate = startDate;
       this.endDate = endDate;
+      this.groupId = groupId;
       this.type = 'election';
       if (this.__isContract) {
         delete this.__isContract;

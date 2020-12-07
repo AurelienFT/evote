@@ -1,6 +1,6 @@
 {
     "name": "voterContract",
-    "version": "7.0.0",
+    "version": "7.0.2",
     "description": "My Smart Contract",
     "main": "index.js",
     "engines": {
@@ -10,6 +10,9 @@
     "scripts": {
         "test": "nyc mocha --recursive",
         "start": "fabric-chaincode-node start"
+    },
+    "env": {
+        "CORE_CHAINCODE_ID_NAME": "voterContract:7.0.2"
     },
     "engineStrict": true,
     "author": "John Doe",

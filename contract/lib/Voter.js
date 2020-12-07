@@ -13,14 +13,11 @@ class Voter {
    * @param voterId - the unique Id which corresponds to a registered voter
    * @returns - registrar object
    */
-  constructor(voterId, registrarId, firstName, lastName) {
+  constructor(voterId) {
 
-    if (this.validateVoter(voterId) && this.validateRegistrar(registrarId)) {
+    if (this.validateVoter(voterId)) {
 
       this.voterId = voterId;
-      this.registrarId = registrarId;
-      this.firstName = firstName;
-      this.lastName = lastName;
       this.ballotCreated = false;
       this.type = 'voter';
       if (this.__isContract) {

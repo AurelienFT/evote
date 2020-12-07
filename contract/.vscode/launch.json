@@ -7,7 +7,7 @@
         {
             "type": "fabric:node",
             "request": "launch",
-            "name": "Debug Smart Contract"
+            "name": "Debug Smart Contract",
         }
     ]
 }

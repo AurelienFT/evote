@@ -40,19 +40,15 @@ class MyAssetContract extends Contract {
   async init(ctx) {
 
     console.log('instantiate was called!');
-
     let voters = [];
     let votableItems = [];
     let elections = [];
     let election;
 
     //create voters
-    let voter1 = await new Voter('V1', '234', 'Horea', 'Porutiu');
-    let voter2 = await new Voter('V2', '345', 'Duncan', 'Conley');
-
-    //update voters array
-    voters.push(voter1);
-    voters.push(voter2);
+    
+    let voter1 = await new Voter(Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
+    let voter2 = await new Voter(Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
 
     //add the voters to the world state, the election class checks for registered voters 
     await ctx.stub.putState(voter1.voterId, Buffer.from(JSON.stringify(voter1)));
