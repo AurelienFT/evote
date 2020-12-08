@@ -22,7 +22,8 @@ class VoterGroup {
         this.membersId.push(this.ownerId);
         this.name = name;
         this.groupId = 'group' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        this.type = 'voter';
+        this.type = 'group';
+        this.electionsId = new Array();
         if (this.__isContract) {
             delete this.__isContract;
         }
@@ -56,6 +57,8 @@ class VoterGroup {
         votableItems.push(approve);
         votableItems.push(denied);
         await ctx.stub.putState(election.electionId, Buffer.from(JSON.stringify(election)));
+        this.electionsId.push(election.electionId);
+        await ctx.stub.putState(this.groupId, Buffer.from(JSON.stringify(this)));
         await ctx.stub.putState(approve.votableId, Buffer.from(JSON.stringify(approve)));
         await ctx.stub.putState(denied.votableId, Buffer.from(JSON.stringify(denied)));
         //generate ballots for all members of the groupe
@@ -64,7 +67,7 @@ class VoterGroup {
     
             let voter = null;
             if (!!buffer && buffer.length > 0) {
-              let voter = JSON.parse(buffer.toString());
+              voter = JSON.parse(buffer.toString());
             }
             if (voter == null) {
                 console.log("unknow error");

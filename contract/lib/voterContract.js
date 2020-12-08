@@ -44,7 +44,7 @@ class MyAssetContract extends Contract {
     await ctx.stub.putState(voter1.voterId, Buffer.from(JSON.stringify(voter1)));
     let startDate = await new Date(2020, 12, 7)
     let endDate = await new Date(2020, 12, 9)
-    await group1.addMember(ctx, null, voter2, startDate, endDate);
+    await group1.addMember(ctx, null, voter2.voterId, startDate, endDate);
   }
 
   //OUTDATED

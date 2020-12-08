@@ -1,29 +1,31 @@
-import Api from './api'
+import axios from 'axios'
 
-function castBallot(electionId, voterId, picked) {
-    return Api().post('castBallot', {       
+const BASE_URL = `http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8081/`;
+
+async function castBallot(electionId, voterId, picked) {
+    return await axios.post(BASE_URL + 'castBallot', {       
       electionId: electionId,
       voterId: voterId,
       picked: picked
     })
   };
 
-function queryAll() {
-    return Api().get('queryAll')
+async function queryAll() {
+    return await axios.get(BASE_URL + 'queryAll')
 };
 
-function queryByObjectType() {
-    return Api().get('queryByObjectType')
+async function queryByObjectType() {
+    return await axios.get(BASE_URL + 'queryByObjectType')
 };
 
-function queryWithQueryString(selected) {
-    return Api().post('queryWithQueryString', {
+async function queryWithQueryString(selected) {
+    return await axios.post(BASE_URL + 'queryWithQueryString', {
       selected: selected
     }) 
 };
 
-function registerVoter(voterId, registrarId, firstName, lastName) {
-    return Api().post('registerVoter', {
+async function registerVoter(voterId, registrarId, firstName, lastName) {
+    return await axios.post(BASE_URL + 'registerVoter', {
       voterId: voterId,
       registrarId: registrarId,
       firstName: firstName,
@@ -32,20 +34,22 @@ function registerVoter(voterId, registrarId, firstName, lastName) {
     }) 
 };
 
-function validateVoter(voterId) {
-    return Api().post('validateVoter', {
+async function validateVoter(voterId) {
+    return await axios.post(BASE_URL + 'validateVoter', {
       voterId: voterId
     }) 
 };
 
-function queryByKey(key) {
-    return Api().post('queryByKey', {
+async function queryByKey(key) {
+    let returned = await axios.post(BASE_URL + 'queryByKey', {
       key: key
-    }) 
+    });
+    console.log(returned);
+    return returned;
 };
 
-function getCurrentStanding() {
-    return Api().get('getCurrentStanding')
+async function getCurrentStanding() {
+    return await axios.get(BASE_URL + 'getCurrentStanding')
 };
 
 export {
