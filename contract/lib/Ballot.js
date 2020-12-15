@@ -66,4 +66,34 @@ class Ballot {
     }
   }
 }
-module.exports = Ballot;
+
+    /**
+   *
+   * generateBallot
+   *
+   * Creates a ballot in the world state, and updates voter ballot and castBallot properties.
+   * 
+   * @param ctx - the context of the transaction
+   * @param votableItems - The different political parties and candidates you can vote for, which are on the ballot.
+   * @param election - the election we are generating a ballot for. All ballots are the same for an election.
+   * @param voter - the voter object
+   * @returns - nothing - but updates the world state with a ballot for a particular voter object
+   */
+  async function generateBallot(ctx, votableItems, election, voter) {
+
+    //generate ballot
+    let ballot = await new Ballot(ctx, votableItems, election, voter.voterId);
+
+    //set reference to voters ballot
+    //TODO: Change to have multiple ballot
+    voter.ballot = ballot.ballotId;
+    voter.ballotCreated = true;
+
+    // //update state with ballot object we just created
+    await ctx.stub.putState(ballot.ballotId, Buffer.from(JSON.stringify(ballot)));
+
+    await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
+
+}
+
+module.exports = {Ballot, generateBallot};

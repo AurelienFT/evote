@@ -11,6 +11,9 @@ const fs = require('fs');
 
 let Voter = require('./Voter.js');
 let VoterGroup = require('./VoterGroup.js');
+let VotableItem = require('./VotableItem.js');
+let {Ballot, generateBallot} = require('./Ballot.js');
+let Election = require('./Election.js');
 const { group } = require('console');
 const { start } = require('repl');
 
@@ -42,9 +45,48 @@ class MyAssetContract extends Contract {
     voter1.groups.push(group1.groupId);
     await ctx.stub.putState(group1.groupId, Buffer.from(JSON.stringify(group1)));
     await ctx.stub.putState(voter1.voterId, Buffer.from(JSON.stringify(voter1)));
-    let startDate = await new Date(2020, 12, 7)
-    let endDate = await new Date(2020, 12, 9)
-    await group1.addMember(ctx, null, voter2.voterId, startDate, endDate);
+  }
+
+  async addGroupMember(ctx, groupId, newUserID) {
+    let startDate = await new Date(2020, 11, 2);
+    let endDate = await new Date(2020, 11, 4);
+    const buffer = await ctx.stub.getState(groupId);
+
+    const group = JSON.parse(buffer.toString());
+    //create the election
+    let election = await new Election("Add " + newUserID + " to " + group.name, startDate, endDate, group.groupId);
+    let approve = await new VotableItem(ctx, "Add this member to the group", election.electionId);
+    let denied = await new VotableItem(ctx, "Don't add this member from the group", election.electionId);
+    let votableItems = [];
+    votableItems.push(approve);
+    votableItems.push(denied);
+    await ctx.stub.putState(election.electionId, Buffer.from(JSON.stringify(election)));
+    group.electionsId.push(election.electionId);
+    await ctx.stub.putState(group.groupId, Buffer.from(JSON.stringify(group)));
+    await ctx.stub.putState(approve.votableId, Buffer.from(JSON.stringify(approve)));
+    await ctx.stub.putState(denied.votableId, Buffer.from(JSON.stringify(denied)));
+    //generate ballots for all members of the group
+    for (let i = 0; i < group.membersId.length; i++) {
+      console.log(group.membersId[i]);
+      const buffer = await ctx.stub.getState(group.membersId[i]);
+
+      const voter = JSON.parse(buffer.toString());
+      if (voter == null) {
+        console.log("unknow error");
+        continue;
+      }
+      // TODO: Change to allow multiple votes
+      if (!voter.ballot) {
+
+        //give each registered voter a ballot
+        await generateBallot(ctx, votableItems, election, voter);
+
+      } else {
+        console.log('voter id:' + voter.id + ' already have ballots');
+        break;
+      }
+
+    }
   }
 
   //OUTDATED
