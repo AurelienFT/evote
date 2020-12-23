@@ -19,7 +19,7 @@ class Ballot {
     if (this.validateBallot(ctx, voterId)) {
 
       this.votableItems = items;
-      this.election = election;
+      this.electionId = election.electionId;
       this.voterId = voterId;
       this.ballotCast = false;
       this.ballotId = 'ballot' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
@@ -86,8 +86,7 @@ class Ballot {
 
     //set reference to voters ballot
     //TODO: Change to have multiple ballot
-    voter.ballot = ballot.ballotId;
-    voter.ballotCreated = true;
+    voter.ballots.push(ballot.ballotId);
 
     // //update state with ballot object we just created
     await ctx.stub.putState(ballot.ballotId, Buffer.from(JSON.stringify(ballot)));

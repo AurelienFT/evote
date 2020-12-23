@@ -44,7 +44,6 @@ async function queryByKey(key) {
     let returned = await axios.post(BASE_URL + 'queryByKey', {
       key: key
     });
-    console.log(returned);
     return returned;
 };
 

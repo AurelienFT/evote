@@ -48,8 +48,8 @@ class MyAssetContract extends Contract {
   }
 
   async addGroupMember(ctx, groupId, newUserID) {
-    let startDate = await new Date(2020, 11, 2);
-    let endDate = await new Date(2020, 11, 4);
+    let startDate = await new Date(2020, 11, 21);
+    let endDate = await new Date(2020, 11, 30);
     const buffer = await ctx.stub.getState(groupId);
 
     const group = JSON.parse(buffer.toString());
@@ -228,14 +228,28 @@ class MyAssetContract extends Contract {
       let voterAsBytes = await ctx.stub.getState(args.voterId);
       let voter = await JSON.parse(voterAsBytes);
 
-      if (voter.ballotCast) {
+      let ballot = undefined;
+      for (let index = 0; index < voter.ballots.length ;index++) {
+        let tmpBallot = await this.readMyAsset(ctx, voter.ballots[index]);
+        if (tmpBallot.electionId == args.electionId) {
+          ballot = tmpBallot;
+          break;
+        }
+      }
+      if (ballot === undefined) {
+        let response = {};
+        response.error = 'this voter don\'t have ballot for this election';
+        return response;
+      }
+
+      if (ballot.ballotCast) {
         let response = {};
         response.error = 'this voter has already cast this ballot!';
         return response;
       }
 
       //check the date of the election, to make sure the election is still open
-      let currentTime = await new Date(2020, 11, 3);
+      let currentTime = await new Date();
 
       //parse date objects
       let parsedCurrentTime = await Date.parse(currentTime);
@@ -264,14 +278,12 @@ class MyAssetContract extends Contract {
         console.log(result);
 
         //make sure this voter cannot vote again! 
-        voter.ballotCast = true;
-        voter.picked = {};
-        voter.picked = args.picked;
+        ballot.ballotCast = true;
 
         //update state to say that this voter has voted, and who they picked
-        let response = await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
+        let response = await ctx.stub.putState(ballot.ballotId, Buffer.from(JSON.stringify(ballot)));
         console.log(response);
-        return voter;
+        return ballot;
 
       } else {
         let response = {};

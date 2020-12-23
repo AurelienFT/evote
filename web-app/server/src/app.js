@@ -44,7 +44,7 @@ app.get('/getCurrentStanding', async (req, res) => {
 
 //vote for some candidates. This will increase the vote count for the votable objects
 app.post('/castBallot', async (req, res) => {
-  let networkObj = await network.connectToNetwork(req.body.voterId);
+  let networkObj = await network.connectToNetwork(appAdmin);
   console.log('util inspecting');
   console.log(util.inspect(networkObj));
   req.body = JSON.stringify(req.body);

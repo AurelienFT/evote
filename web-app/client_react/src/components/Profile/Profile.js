@@ -1,17 +1,16 @@
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import { Typography, Card, Input, Row, Col, List, Button } from 'antd';
+import { Typography, Card, Row, Col, List, Button } from 'antd';
 import { queryByKey } from "../../services/apiService";
 import { Redirect, useHistory } from 'react-router-dom';
 
 import './Profile.css';
 import { useState } from 'react';
 
-const { Title, Text } = Typography;
-const { Search } = Input;
+const { Title } = Typography;
 
 function Profile() {
-    const [cookies, setCookie, removeCookie] = useCookies(['voterData']);
+    const [cookies] = useCookies(['voterData']);
     const [groups, setGroups] = useState([]);
     const history = useHistory();
 

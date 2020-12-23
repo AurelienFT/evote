@@ -1,6 +1,6 @@
 {
     "name": "voterContract",
-    "version": "0.0.3",
+    "version": "0.0.9",
     "description": "My Smart Contract",
     "main": "index.js",
     "engines": {
@@ -12,7 +12,7 @@
         "start": "fabric-chaincode-node start"
     },
     "env": {
-        "CORE_CHAINCODE_ID_NAME": "voterContract:0.0.3"
+        "CORE_CHAINCODE_ID_NAME": "voterContract:0.0.9"
     },
     "engineStrict": true,
     "author": "John Doe",
