@@ -98,8 +98,7 @@ app.post('/registerVoter', async (req, res) => {
     console.log('network obj');
     console.log(util.inspect(networkObj));
 
-
-    req.body = JSON.stringify(req.body);
+    req.body = JSON.stringify({voterId: 'voter' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)});
     let args = [req.body];
     //connect to network and update the state with voterId  
 
@@ -108,15 +107,51 @@ app.post('/registerVoter', async (req, res) => {
     if (invokeResponse.error) {
       res.send(invokeResponse.error);
     } else {
+      console.log('after network.invoke ');
+      res.send(invokeResponse);
+    }
+  }
+});
 
+//get voter info, create voter object, and update state with their voterId
+app.post('/registerGroup', async (req, res) => {
+  console.log('req.body: ');
+  console.log(req.body);
+  let response = {};
+  //FIX ME: use group of fabric
+  console.log('response from registerVoter: ');
+  console.log(response);
+  if (response.error) {
+    res.send(response.error);
+  } else {
+    console.log('req.body.ownerId');
+    console.log(req.body.ownerId);
+    // FIX WITH VOTER ID
+    let networkObj = await network.connectToNetwork(appAdmin);
+    console.log('networkobj: ');
+
+    if (networkObj.error) {
+      res.send(networkObj.error);
+    }
+    console.log('network obj');
+    console.log(util.inspect(networkObj));
+
+    req.body = JSON.stringify(req.body);
+    let args = [req.body];
+    console.log("args:")
+    console.log(args);
+    //connect to network and update the state with voterId  
+
+    let invokeResponse = await network.invoke(networkObj, false, 'createGroup', args);
+    
+    if (invokeResponse.error) {
+      res.send(invokeResponse.error);
+    } else {
       console.log('after network.invoke ');
       res.send(invokeResponse);
 
     }
-
   }
-
-
 });
 
 //used as a way to login the voter to the app and make sure they haven't voted before 

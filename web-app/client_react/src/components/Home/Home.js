@@ -36,6 +36,7 @@ function Home() {
     };
     async function createNewUser() {
         let user = await registerVoter();
+        console.log(user);
         setCookie('voterdata', user.data);
         history.push("/profile");
     } 

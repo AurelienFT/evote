@@ -98,6 +98,8 @@ class MyAssetContract extends Contract {
    * @returns - new voter 
    */
   async createVoter(ctx, args) {
+    args = JSON.parse(args);
+
     if (!args.voterId) {
       let response = {};
       response.error = `VoterId is missing in args`;
@@ -106,6 +108,36 @@ class MyAssetContract extends Contract {
     let voter = await new Voter(args.voterId);
     await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
     return voter;
+  }
+
+    /**
+   *
+   * createGroup
+   *
+   * Creates a group in the world state, based on the args given.
+   *  
+   * @returns - new voter 
+   */
+  async createGroup(ctx, args) {
+    args = JSON.parse(args);
+
+    if (!args.ownerId || !args.groupName) {
+      let response = {};
+      response.error = `ownerId or groupName is missing in args`;
+      return response;
+    }
+    let group = await new VoterGroup(args.ownerId, args.groupName);
+    let voterAsBytes = await ctx.stub.getState(args.ownerId);
+    let voter = await JSON.parse(voterAsBytes);
+    if (voter.error) {
+      let response = {};
+      response.error = 'this voter don\'t exists.';
+      return response;
+    }
+    voter.groups.push(group.groupId);
+    await ctx.stub.putState(group.groupId, Buffer.from(JSON.stringify(group)));
+    await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
+    return group;
   }
 
   /**

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
-import { Typography, Card, Row, Col, List, Button } from 'antd';
-import { queryByKey } from "../../services/apiService";
+import { Typography, Card, Row, Col, List, Button, Form, Input } from 'antd';
+import { queryByKey, registerGroup } from "../../services/apiService";
 import Navbar from '../Navbar/Navbar';
 import { Redirect, useHistory } from 'react-router-dom';
 
@@ -14,6 +14,7 @@ function Profile() {
     const [cookies] = useCookies(['voterData']);
     const [groups, setGroups] = useState([]);
     const history = useHistory();
+    const [init, setInit] = useState(false);
 
     useEffect(() => {
         async function getGroups() {
@@ -22,7 +23,7 @@ function Profile() {
                     pathname: "/",
                 }} />
             }
-            if (groups.length === 0) {
+            if (groups.length === 0 && init == false) {
                 let groupIds = cookies['voterdata'].groups;
                 let index = 0;
                 let groupsTemp = [];
@@ -31,14 +32,19 @@ function Profile() {
                     groupsTemp.push(value.data);
                 }
                 setGroups(groupsTemp);
+                setInit(true);
             }
         }
         getGroups();
-    }, [groups, cookies]);
+    }, [groups, cookies, init, setInit]);
 
     const goToGroup = groupId => {
         history.push("/group/" + groupId);
-    } 
+    }
+
+    async function onFinish(values) {
+        console.log(await registerGroup(cookies['voterdata'].voterId, values.groupName));
+    };
 
     if (!cookies['voterdata'] || !cookies['voterdata'].voterId) {
         return <Redirect to={{
@@ -72,9 +78,9 @@ function Profile() {
                         <List.Item>
                             <Card title={item.name} style={{ border: "5px solid #7D5EFF" }}>
                                 <div className="infosGroup">
-                                ID: {item.groupId}
+                                    ID: {item.groupId}
                                 </div>
-                                <Button type="primary" shape="round" size={'large'} onClick={() => {goToGroup(item.groupId)}}>
+                                <Button type="primary" shape="round" size={'large'} onClick={() => { goToGroup(item.groupId) }}>
                                     Elections
                             </Button>
                             </Card>
@@ -82,6 +88,32 @@ function Profile() {
                         </List.Item>
                     )}
                 />
+                <Row align="middle" justify="center" className="rowTitle">
+                    <Col span={24} className="colTitle">
+                        <Typography>
+                            <Title level={3}> Create Group : </Title>
+                        </Typography>
+                        <Form
+                            name="form"
+                            onFinish={onFinish}
+                        >
+                            <Form.Item name="groupName">
+                                <Form.Item
+                                    label="GroupName"
+                                    name="groupName"
+                                    rules={[{ required: true, message: 'Please input your username!' }]}
+                                >
+                                    <Input />
+                                </Form.Item>
+                            </Form.Item>
+                            <Form.Item >
+                                <Button type="primary" htmlType="submit">
+                                    Submit
+                            </Button>
+                            </Form.Item>
+                        </Form>
+                    </Col>
+                </Row>
             </div>
 
         </div>

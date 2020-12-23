@@ -28,6 +28,13 @@ async function registerVoter() {
     return await axios.post(BASE_URL + 'registerVoter') 
 };
 
+async function registerGroup(ownerId, groupName) {
+  return await axios.post(BASE_URL + 'registerGroup', {
+    ownerId: ownerId,
+    groupName: groupName
+  }) 
+};
+
 async function validateVoter(voterId) {
     return await axios.post(BASE_URL + 'validateVoter', {
       voterId: voterId
@@ -51,6 +58,7 @@ export {
   queryByObjectType,
   queryWithQueryString,
   registerVoter,
+  registerGroup,
   validateVoter,
   queryByKey,
   getCurrentStanding
