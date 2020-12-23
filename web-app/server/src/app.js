@@ -77,9 +77,9 @@ app.post('/registerVoter', async (req, res) => {
   console.log('req.body: ');
   console.log(req.body);
   let voterId = req.body.voterId;
-
-  //first create the identity for the voter and add to wallet
-  let response = await network.registerVoter(voterId, req.body.registrarId, req.body.firstName, req.body.lastName);
+  let response = {};
+  //FIX ME: first create the identity for the voter and add to wallet
+  //let response = await network.registerVoter('voter' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
   console.log('response from registerVoter: ');
   console.log(response);
   if (response.error) {
@@ -87,7 +87,8 @@ app.post('/registerVoter', async (req, res) => {
   } else {
     console.log('req.body.voterId');
     console.log(req.body.voterId);
-    let networkObj = await network.connectToNetwork(voterId);
+    // FIX WITH VOTER ID
+    let networkObj = await network.connectToNetwork(appAdmin);
     console.log('networkobj: ');
     console.log(networkObj);
 
@@ -109,9 +110,7 @@ app.post('/registerVoter', async (req, res) => {
     } else {
 
       console.log('after network.invoke ');
-      let parsedResponse = JSON.parse(invokeResponse);
-      parsedResponse += '. Use voterId to login above.';
-      res.send(parsedResponse);
+      res.send(invokeResponse);
 
     }
 

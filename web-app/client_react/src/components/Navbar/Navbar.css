@@ -1,0 +1,39 @@
+.navbarContainer {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: blue;
+	font-size: 20px;
+	height: 4.5em;
+	box-shadow: 3px 7px 35px 0px rgba(173, 173, 173, 0.81);
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.navbarLogo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 2em;
+}
+
+.navbarLogo img {
+	height: 65px;
+	width: auto;
+}
+
+.navbarOption {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-right: 2em;
+}
+
+.navbarOption .option {
+	font-family: "Montserrat";
+	color: white;
+	margin-left: 2em;
+	margin-right: 2em;
+	font-size: 16px;
+	font-weight: bold;
+}

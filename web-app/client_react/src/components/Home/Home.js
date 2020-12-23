@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Typography, Button, Input, Row, Col } from 'antd';
 import './Home.css';
-import { Redirect } from 'react-router-dom';
-import { queryByKey } from "../../services/apiService";
+import { Redirect, useHistory } from 'react-router-dom';
+import { queryByKey, registerVoter } from "../../services/apiService";
 import { useCookies } from 'react-cookie';
 
 const { Title, Text } = Typography;
@@ -12,6 +12,7 @@ function Home() {
     const [displayError, setDisplayError] = useState(false);
     const [redirect, setRedirect] = useState(null);
     const [cookies, setCookie] = useCookies(['voterData']);
+    const history = useHistory();
 
     if (redirect) {
         return <Redirect  to={{
@@ -33,6 +34,11 @@ function Home() {
             }
         });
     };
+    async function createNewUser() {
+        let user = await registerVoter();
+        setCookie('voterdata', user.data);
+        history.push("/profile");
+    } 
     return (
         <div>
             <Typography className="title">
@@ -58,7 +64,7 @@ function Home() {
                     <Typography className="enterIdTitle">
                         <Title>OR</Title>
                     </Typography>
-                    <Button type="primary" shape="round" size={'large'}>
+                    <Button type="primary" shape="round" size={'large'} onClick={() => {createNewUser()}}>
                         Create a new profil
             </Button>
                 </Col>

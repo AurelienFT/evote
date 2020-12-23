@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { Typography, Card, Row, Col, List, Button } from 'antd';
 import { queryByKey } from "../../services/apiService";
+import Navbar from '../Navbar/Navbar';
 import { Redirect, useHistory } from 'react-router-dom';
 
 import './Profile.css';
@@ -47,6 +48,7 @@ function Profile() {
 
     return (
         <div>
+            <Navbar />
             <Row align="middle" justify="center" className="rowTitle">
                 <Col span={24} className="colTitle">
                     <Typography>

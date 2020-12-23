@@ -158,15 +158,12 @@ exports.invoke = async function (networkObj, isQuery, func, args) {
   }
 };
 
-exports.registerVoter = async function (voterId, registrarId, firstName, lastName) {
-
-  console.log('registrarId');
-  console.log(registrarId);
+exports.registerVoter = async function (voterId) {
 
   console.log('voterId ');
   console.log(voterId);
 
-  if (!registrarId || !voterId || !firstName || !lastName) {
+  if (!voterId) {
     let response = {};
     response.error = 'Error! You need to fill all fields before you can register!';
     return response;
@@ -216,8 +213,8 @@ exports.registerVoter = async function (voterId, registrarId, firstName, lastNam
     const enrollment = await ca.enroll({ enrollmentID: voterId, enrollmentSecret: secret });
     const userIdentity = await X509WalletMixin.createIdentity(orgMSPID, enrollment.certificate, enrollment.key.toBytes());
     await wallet.import(voterId, userIdentity);
-    console.log(`Successfully registered voter ${firstName} ${lastName}. Use voterId ${voterId} to login above.`);
-    let response = `Successfully registered voter ${firstName} ${lastName}. Use voterId ${voterId} to login above.`;
+    console.log(`Successfully registered voter. Use voterId ${voterId} to login above.`);
+    let response = `Successfully registered voter. Use voterId ${voterId} to login above.`;
     return response;
   } catch (error) {
     console.error(`Failed to register user + ${voterId} + : ${error}`);

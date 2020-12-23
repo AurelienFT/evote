@@ -24,14 +24,8 @@ async function queryWithQueryString(selected) {
     }) 
 };
 
-async function registerVoter(voterId, registrarId, firstName, lastName) {
-    return await axios.post(BASE_URL + 'registerVoter', {
-      voterId: voterId,
-      registrarId: registrarId,
-      firstName: firstName,
-      lastName: lastName,
-      
-    }) 
+async function registerVoter() {
+    return await axios.post(BASE_URL + 'registerVoter') 
 };
 
 async function validateVoter(voterId) {

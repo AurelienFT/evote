@@ -3,6 +3,7 @@ import { useCookies } from 'react-cookie';
 import { Typography, Card, Row, Col, List, Button } from 'antd';
 import { queryByKey } from "../../services/apiService";
 import { Redirect, useParams, useHistory } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 import './Group.css';
 import { useState } from 'react';
@@ -71,6 +72,7 @@ function Group() {
 
     return (
         <div>
+            <Navbar />
             <Row align="middle" justify="center" className="rowTitle">
                 <Col span={24} className="colTitle">
                     <Typography>

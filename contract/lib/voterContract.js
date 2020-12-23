@@ -89,51 +89,24 @@ class MyAssetContract extends Contract {
     }
   }
 
-  //OUTDATED
   /**
    *
    * createVoter
    *
    * Creates a voter in the world state, based on the args given.
    *  
-   * @param args.voterId - the Id the voter, used as the key to store the voter object
-   * @param args.registrarId - the registrar the voter is registered for
-   * @param args.firstName - first name of voter
-   * @param args.lastName - last name of voter
-   * @returns - nothing - but updates the world state with a voter
+   * @returns - new voter 
    */
   async createVoter(ctx, args) {
-
-    args = JSON.parse(args);
-
-    //create a new voter
-    let newVoter = await new Voter(args.voterId, args.registrarId, args.firstName, args.lastName);
-
-    //update state with new voter
-    await ctx.stub.putState(newVoter.voterId, Buffer.from(JSON.stringify(newVoter)));
-
-    //query state for elections
-    let currElections = JSON.parse(await this.queryByObjectType(ctx, 'election'));
-
-    if (currElections.length === 0) {
+    if (!args.voterId) {
       let response = {};
-      response.error = 'no elections. Run the init() function first.';
+      response.error = `VoterId is missing in args`;
       return response;
     }
-
-    //get the election that is created in the init function
-    let currElection = currElections[0];
-
-    let votableItems = JSON.parse(await this.queryByObjectType(ctx, 'votableItem'));
-
-    //generate ballot with the given votableItems
-    await this.generateBallot(ctx, votableItems, currElection, newVoter);
-
-    let response = `voter with voterId ${newVoter.voterId} is updated in the world state`;
-    return response;
+    let voter = await new Voter(args.voterId);
+    await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
+    return voter;
   }
-
-
 
   /**
    *

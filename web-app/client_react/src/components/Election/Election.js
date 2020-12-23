@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { Typography, Row, Col, Button, Radio, Form } from 'antd';
 import { queryByKey, castBallot } from "../../services/apiService";
-import { Redirect, useParams, useHistory } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
 
 import { useState } from 'react';
 
@@ -76,6 +77,7 @@ function Election() {
 
     return (
         <div>
+            <Navbar />
             <Row align="middle" justify="center" className="rowTitle">
                 <Col span={24} className="colTitle">
                     <Typography>
