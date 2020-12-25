@@ -35,6 +35,15 @@ async function registerGroup(ownerId, groupName) {
   }) 
 };
 
+async function addGroupMember(groupId, newMemberId, startDate, endDate) {
+  return await axios.post(BASE_URL + 'addGroupMember', {
+    groupId: groupId,
+    newMemberId: newMemberId,
+    startDate: startDate,
+    endDate: endDate
+  }) 
+};
+
 async function validateVoter(voterId) {
     return await axios.post(BASE_URL + 'validateVoter', {
       voterId: voterId
@@ -53,6 +62,7 @@ async function getCurrentStanding() {
 };
 
 export {
+  addGroupMember,
   castBallot,
   queryAll,
   queryByObjectType,

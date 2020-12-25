@@ -47,14 +47,15 @@ class MyAssetContract extends Contract {
     await ctx.stub.putState(voter1.voterId, Buffer.from(JSON.stringify(voter1)));
   }
 
-  async addGroupMember(ctx, groupId, newUserID) {
-    let startDate = await new Date(2020, 11, 21);
-    let endDate = await new Date(2020, 11, 30);
-    const buffer = await ctx.stub.getState(groupId);
+  async addGroupMember(ctx, args) {
+    args = JSON.parse(args);
+    let startDate = await new Date(args.startDate);
+    let endDate = await new Date(args.endDate);
+    const buffer = await ctx.stub.getState(args.groupId);
 
     const group = JSON.parse(buffer.toString());
     //create the election
-    let election = await new Election("Add " + newUserID + " to " + group.name, startDate, endDate, group.groupId);
+    let election = await new Election("Add " + args.newUserID + " to " + group.name, startDate, endDate, group.groupId);
     let approve = await new VotableItem(ctx, "Add this member to the group", election.electionId);
     let denied = await new VotableItem(ctx, "Don't add this member from the group", election.electionId);
     let votableItems = [];

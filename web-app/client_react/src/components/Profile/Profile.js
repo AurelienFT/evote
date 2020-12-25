@@ -24,7 +24,7 @@ function Profile() {
                 }} />
             }
             if (groups.length === 0 && init == false) {
-                let groupIds = cookies['voterdata'].groups;
+                let groupIds = (await queryByKey(cookies['voterdata'].voterId)).data.groups;
                 let index = 0;
                 let groupsTemp = [];
                 for (index = 0; index < groupIds.length; ++index) {
@@ -89,7 +89,9 @@ function Profile() {
                     )}
                 />
                 <Row align="middle" justify="center" className="rowTitle">
-                    <Col span={24} className="colTitle">
+                    <Col span={6} className="colTitle">
+                    </Col>
+                    <Col span={12} className="colTitle">
                         <Typography>
                             <Title level={3}> Create Group : </Title>
                         </Typography>
@@ -97,7 +99,6 @@ function Profile() {
                             name="form"
                             onFinish={onFinish}
                         >
-                            <Form.Item name="groupName">
                                 <Form.Item
                                     label="GroupName"
                                     name="groupName"
@@ -105,13 +106,14 @@ function Profile() {
                                 >
                                     <Input />
                                 </Form.Item>
-                            </Form.Item>
                             <Form.Item >
                                 <Button type="primary" htmlType="submit">
                                     Submit
                             </Button>
                             </Form.Item>
                         </Form>
+                    </Col>
+                    <Col span={6} className="colTitle">
                     </Col>
                 </Row>
             </div>
