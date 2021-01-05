@@ -11,7 +11,7 @@ import { useState } from 'react';
 const { Title } = Typography;
 
 function Profile() {
-    const [cookies] = useCookies(['voterData']);
+    const [cookies] = useCookies(['voterdata']);
     const [groups, setGroups] = useState([]);
     const history = useHistory();
     const [init, setInit] = useState(false);
@@ -23,7 +23,7 @@ function Profile() {
                     pathname: "/",
                 }} />
             }
-            if (groups.length === 0 && init == false) {
+            if (groups.length === 0 && init === false) {
                 let groupIds = (await queryByKey(cookies['voterdata'].voterId)).data.groups;
                 let index = 0;
                 let groupsTemp = [];
@@ -66,12 +66,6 @@ function Profile() {
                 <List
                     grid={{
                         gutter: 16,
-                        xs: 1,
-                        sm: 2,
-                        md: 4,
-                        lg: 4,
-                        xl: 6,
-                        xxl: 5,
                     }}
                     dataSource={groups}
                     renderItem={(item) => (

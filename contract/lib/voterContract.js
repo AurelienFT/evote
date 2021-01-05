@@ -55,12 +55,15 @@ class MyAssetContract extends Contract {
 
     const group = JSON.parse(buffer.toString());
     //create the election
-    let election = await new Election("Add " + args.newUserID + " to " + group.name, startDate, endDate, group.groupId);
+    let election = await new Election("Add " + args.newMemberId + " to " + group.name, startDate, endDate, group.groupId);
     let approve = await new VotableItem(ctx, "Add this member to the group", election.electionId);
     let denied = await new VotableItem(ctx, "Don't add this member from the group", election.electionId);
     let votableItems = [];
     votableItems.push(approve);
     votableItems.push(denied);
+    election.items.push(approve.votableId);
+    election.items.push(denied.votableId);
+    election.memberToAdd = args.newMemberId;
     await ctx.stub.putState(election.electionId, Buffer.from(JSON.stringify(election)));
     group.electionsId.push(election.electionId);
     await ctx.stub.putState(group.groupId, Buffer.from(JSON.stringify(group)));
@@ -88,6 +91,40 @@ class MyAssetContract extends Contract {
       }
 
     }
+  }
+
+  async triggerActionsElection(ctx, args) {
+    //TODO: Add verifications
+    args = JSON.parse(args);
+    if (!args.electionId) {
+      let response = {};
+      response.error = `ElectionId is missing in args`;
+      return response;
+    }
+    let buffer = await ctx.stub.getState(args.electionId);
+    const election = JSON.parse(buffer.toString());
+    if (election.triggered) {
+      let response = {};
+      response.error = `Election actions already triggered`;
+      return response; 
+    }
+    //TODO: Make it be more general
+    buffer = await ctx.stub.getState(election.items[0]);
+    const yesItem = JSON.parse(buffer.toString());
+    buffer = await ctx.stub.getState(election.items[1]);
+    const noItem = JSON.parse(buffer.toString());
+    if (yesItem.count >= noItem.count) {
+      buffer = await ctx.stub.getState(election.groupId);
+      const group = JSON.parse(buffer.toString());
+      buffer = await ctx.stub.getState(election.memberToAdd);
+      const voter = JSON.parse(buffer.toString());
+      group.membersId.push(election.memberToAdd);
+      voter.groups.push(election.groupId);
+      await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));
+      await ctx.stub.putState(group.groupId, Buffer.from(JSON.stringify(group)));
+    }
+    election.triggered = true;
+    await ctx.stub.putState(election.electionId, Buffer.from(JSON.stringify(election)));
   }
 
   /**

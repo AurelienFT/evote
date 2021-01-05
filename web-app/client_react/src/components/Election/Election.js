@@ -1,11 +1,10 @@
-import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import { Typography, Row, Col, Button, Radio, Form } from 'antd';
 import { queryByKey, castBallot } from "../../services/apiService";
 import { Redirect, useParams } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const { Title } = Typography;
 
@@ -16,15 +15,16 @@ function Election() {
         init: false,
         optionSelected: 0,
     });
-    const radioStyle = {
-        display: 'block',
-        height: '30px',
-        lineHeight: '30px',
-    };
-    const [cookies] = useCookies(['voterData']);
+
+    const [cookies] = useCookies(['voterdata']);
     //TODO : Add check if user have access to the election and not already voted
     useEffect(() => {
         async function getElection() {
+            const radioStyle = {
+                display: 'block',
+                height: '30px',
+                lineHeight: '30px',
+            };
             if (!cookies['voterdata'] || !cookies['voterdata'].voterId) {
                 return <Redirect to={{
                     pathname: "/",
@@ -39,7 +39,7 @@ function Election() {
                 let ballot = undefined;
                 for (let index = 0; index < user.data.ballots.length ;index++) {
                     let tmpBallot = await queryByKey(user.data.ballots[index]);
-                    if (tmpBallot.data.electionId == electionId) {
+                    if (tmpBallot.data.electionId === electionId) {
                       ballot = tmpBallot;
                       break;
                     }

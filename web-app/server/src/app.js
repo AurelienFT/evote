@@ -159,8 +159,6 @@ app.post('/addGroupMember', async (req, res) => {
   console.log(req.body);
   let response = {};
   //FIX ME: use group of fabric
-  console.log('response from addGroupMember: ');
-  console.log(response);
   if (response.error) {
     res.send(response.error);
   } else {
@@ -183,6 +181,44 @@ app.post('/addGroupMember', async (req, res) => {
     //connect to network and update the state with voterId  
 
     let invokeResponse = await network.invoke(networkObj, false, 'addGroupMember', args);
+    
+    if (invokeResponse.error) {
+      res.send(invokeResponse.error);
+    } else {
+      console.log('after network.invoke ');
+      res.send(invokeResponse);
+
+    }
+  }
+});
+
+app.post('/triggerActionsElection', async (req, res) => {
+  console.log('req.body: ');
+  console.log(req.body);
+  let response = {};
+  //FIX ME: use group of fabric
+  if (response.error) {
+    res.send(response.error);
+  } else {
+    console.log('req.body.electionId');
+    console.log(req.body.electionId);
+    // FIX WITH VOTER ID
+    let networkObj = await network.connectToNetwork(appAdmin);
+    console.log('networkobj: ');
+
+    if (networkObj.error) {
+      res.send(networkObj.error);
+    }
+    console.log('network obj');
+    console.log(util.inspect(networkObj));
+
+    req.body = JSON.stringify(req.body);
+    let args = [req.body];
+    console.log("args:")
+    console.log(args);
+    //connect to network and update the state with voterId  
+
+    let invokeResponse = await network.invoke(networkObj, false, 'triggerActionsElection', args);
     
     if (invokeResponse.error) {
       res.send(invokeResponse.error);

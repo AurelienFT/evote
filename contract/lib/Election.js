@@ -44,6 +44,10 @@ class Election {
       this.endDate = endDate;
       this.groupId = groupId;
       this.type = 'election';
+      this.items = [];
+      this.triggered = false;
+      //TODO: Make it generally
+      this.memberToAdd = '';
       if (this.__isContract) {
         delete this.__isContract;
       }

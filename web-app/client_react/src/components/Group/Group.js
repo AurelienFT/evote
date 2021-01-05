@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useCookies } from 'react-cookie';
 import moment from 'moment';
 import { Typography, Card, Row, Col, List, Button, Form, Input, DatePicker } from 'antd';
-import { queryByKey, addGroupMember } from "../../services/apiService";
+import { queryByKey, addGroupMember, triggerActionsElection } from "../../services/apiService";
 import { Redirect, useParams, useHistory } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
@@ -13,7 +13,7 @@ const { Title } = Typography;
 const { RangePicker } = DatePicker;
 
 function Group() {
-    const [cookies] = useCookies(['voterData']);
+    const [cookies] = useCookies(['voterdata']);
     const [elections, setElections] = useState({
         upcomingElections: [],
         elections: [],
@@ -60,48 +60,20 @@ function Group() {
             }
         }
         getElections();
-    }, [elections, cookies]);
+    }, [elections, cookies, groupId]);
 
-
-    function range(start, end) {
-        const result = [];
-        for (let i = start; i < end; i++) {
-            result.push(i);
-        }
-        return result;
-    }
 
     function disabledDate(current) {
         // Can not select days before today and today
-        return current && current < moment().endOf('day');
+        return current && current < moment().subtract(1, 'days').endOf('day');
     }
-
-    function disabledDateTime() {
-        return {
-            disabledHours: () => range(0, 24).splice(4, 20),
-            disabledMinutes: () => range(30, 60),
-            disabledSeconds: () => [55, 56],
-        };
-    }
-
-    function disabledRangeTime(_, type) {
-        if (type === 'start') {
-            return {
-                disabledHours: () => range(0, 60).splice(4, 20),
-                disabledMinutes: () => range(30, 60),
-                disabledSeconds: () => [55, 56],
-            };
-        }
-        return {
-            disabledHours: () => range(0, 60).splice(20, 4),
-            disabledMinutes: () => range(0, 31),
-            disabledSeconds: () => [55, 56],
-        };
-    }
-
 
     const goToElection = electionId => {
         history.push("/election/" + electionId);
+    }
+
+    const goToElectionResults = electionId => {
+        history.push("/election_results/" + electionId);
     }
 
     if (!cookies['voterdata'] || !cookies['voterdata'].voterId) {
@@ -140,13 +112,7 @@ function Group() {
             <div style={{ margin: 25 }}>
                 <List
                     grid={{
-                        gutter: 16,
-                        xs: 1,
-                        sm: 2,
-                        md: 4,
-                        lg: 4,
-                        xl: 6,
-                        xxl: 5,
+                        gutter: 3,
                     }}
                     dataSource={elections.elections}
                     renderItem={(item) => (
@@ -161,9 +127,17 @@ function Group() {
                                 <div>
                                     End date : {item.endDate}
                                 </div>
-                                <Button type="primary" shape="round" size={'large'} onClick={() => { goToElection(item.electionId) }}>
-                                    Vote !
+                                {item.triggered ? <div>Actions already been taken                             <Button type="primary" shape="round" size={'large'} onClick={() => { goToElectionResults(item.electionId) }}>
+                                    Results
+                            </Button></div> : <div><Button type="primary" shape="round" size={'large'} onClick={() => { goToElection(item.electionId) }}>
+                                        Vote !
                             </Button>
+                                        <Button type="primary" shape="round" size={'large'} onClick={() => { goToElectionResults(item.electionId) }}>
+                                            Results
+                            </Button>
+                                        <Button type="primary" shape="round" size={'large'} onClick={() => { triggerActionsElection(item.electionId) }}>
+                                            Trigger Actions
+                            </Button></div>}
                             </Card>
 
                         </List.Item>
@@ -180,13 +154,7 @@ function Group() {
             <div style={{ margin: 25 }}>
                 <List
                     grid={{
-                        gutter: 16,
-                        xs: 1,
-                        sm: 2,
-                        md: 4,
-                        lg: 4,
-                        xl: 6,
-                        xxl: 5,
+                        gutter: 3,
                     }}
                     dataSource={elections.upcomingElections}
                     renderItem={(item) => (
@@ -217,13 +185,7 @@ function Group() {
             <div style={{ margin: 25 }}>
                 <List
                     grid={{
-                        gutter: 16,
-                        xs: 1,
-                        sm: 2,
-                        md: 4,
-                        lg: 4,
-                        xl: 6,
-                        xxl: 5,
+                        gutter: 3,
                     }}
                     dataSource={elections.endedElections}
                     renderItem={(item) => (

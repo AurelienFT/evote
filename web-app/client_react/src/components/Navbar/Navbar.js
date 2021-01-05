@@ -5,7 +5,7 @@ import { useCookies } from 'react-cookie';
 
 function Navbar() {
     const history = useHistory();
-    const [cookies, setCookie, removeCookie] = useCookies(['voterData']);
+    const [, , removeCookie] = useCookies(['voterdata']);
 
 	return (
 		<Row style={{backgroundColor: "#7D5EFF", fontSize: "20px"}}>

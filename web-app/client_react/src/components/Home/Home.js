@@ -11,7 +11,7 @@ const { Search } = Input;
 function Home() {
     const [displayError, setDisplayError] = useState(false);
     const [redirect, setRedirect] = useState(null);
-    const [cookies, setCookie] = useCookies(['voterData']);
+    const [cookies, setCookie] = useCookies(['voterdata']);
     const history = useHistory();
 
     if (redirect) {

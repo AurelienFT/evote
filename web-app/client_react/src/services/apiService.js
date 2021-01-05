@@ -44,6 +44,13 @@ async function addGroupMember(groupId, newMemberId, startDate, endDate) {
   }) 
 };
 
+async function triggerActionsElection(electionId) {
+  return await axios.post(BASE_URL + 'triggerActionsElection', {
+    electionId: electionId
+  }) 
+};
+
+
 async function validateVoter(voterId) {
     return await axios.post(BASE_URL + 'validateVoter', {
       voterId: voterId
@@ -71,5 +78,6 @@ export {
   registerGroup,
   validateVoter,
   queryByKey,
-  getCurrentStanding
+  getCurrentStanding,
+  triggerActionsElection
 }
