@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = `http://ec2-15-237-109-51.eu-west-3.compute.amazonaws.com:8081/`;
+const BASE_URL = `https://api.vote.oursin.eu/`;
 
 async function castBallot(electionId, voterId, picked) {
     return await axios.post(BASE_URL + 'castBallot', {       

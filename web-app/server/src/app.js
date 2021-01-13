@@ -8,7 +8,10 @@ const util = require('util');
 const path = require('path');
 const fs = require('fs');
 
-let network = require('./fabric/network.js');
+let fabric = require('./fabric/network.js');
+const { queryAll, queryByObjectType, queryByKey, readAsset } = require('./evote/util');
+const { registerGroup, addGroupMember } = require('./evote/group');
+const { registerVoter, castBallot, getCurrentStanding } = require('./evote/voter');
 
 const app = express();
 app.use(morgan('combined'));
@@ -24,18 +27,16 @@ const appAdmin = config.appAdmin;
 
 //get all assets in world state
 app.get('/queryAll', async (req, res) => {
-
-  let networkObj = await network.connectToNetwork(appAdmin);
-  let response = await network.invoke(networkObj, true, 'queryAll', '');
+  let network = await fabric.connectToNetwork(appAdmin);
+  const response = await queryAll(network);
   let parsedResponse = await JSON.parse(response);
   res.send(parsedResponse);
-
 });
 
 app.get('/getCurrentStanding', async (req, res) => {
 
-  let networkObj = await network.connectToNetwork(appAdmin);
-  let response = await network.invoke(networkObj, true, 'queryByObjectType', 'votableItem');
+  let network = await fabric.connectToNetwork(appAdmin);
+  let response = await getCurrentStanding(network);
   let parsedResponse = await JSON.parse(response);
   console.log(parsedResponse);
   res.send(parsedResponse);
@@ -44,15 +45,9 @@ app.get('/getCurrentStanding', async (req, res) => {
 
 //vote for some candidates. This will increase the vote count for the votable objects
 app.post('/castBallot', async (req, res) => {
-  let networkObj = await network.connectToNetwork(appAdmin);
-  console.log('util inspecting');
-  console.log(util.inspect(networkObj));
-  req.body = JSON.stringify(req.body);
-  console.log('req.body');
-  console.log(req.body);
-  let args = [req.body];
+  let networkObj = await fabric.connectToNetwork(appAdmin);
 
-  let response = await network.invoke(networkObj, false, 'castVote', args);
+  let response = await castBallot(networkObj, req.body);
   if (response.error) {
     res.send(response.error);
   } else {
@@ -65,8 +60,8 @@ app.post('/castBallot', async (req, res) => {
 
 //query for certain objects within the world state
 app.post('/queryWithQueryString', async (req, res) => {
-  let networkObj = await network.connectToNetwork(appAdmin);
-  let response = await network.invoke(networkObj, true, 'queryByObjectType', req.body.selected);
+  let network = await fabric.connectToNetwork(appAdmin);
+  let response = await queryByObjectType(network, req.body.selected);
   let parsedResponse = await JSON.parse(response);
   res.send(parsedResponse);
 
@@ -74,9 +69,6 @@ app.post('/queryWithQueryString', async (req, res) => {
 
 //get voter info, create voter object, and update state with their voterId
 app.post('/registerVoter', async (req, res) => {
-  console.log('req.body: ');
-  console.log(req.body);
-  let voterId = req.body.voterId;
   let response = {};
   //FIX ME: first create the identity for the voter and add to wallet
   //let response = await network.registerVoter('voter' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
@@ -85,24 +77,16 @@ app.post('/registerVoter', async (req, res) => {
   if (response.error) {
     res.send(response.error);
   } else {
-    console.log('req.body.voterId');
-    console.log(req.body.voterId);
     // FIX WITH VOTER ID
-    let networkObj = await network.connectToNetwork(appAdmin);
-    console.log('networkobj: ');
-    console.log(networkObj);
+    let networkObj = await fabric.connectToNetwork(appAdmin);
 
     if (networkObj.error) {
       res.send(networkObj.error);
     }
-    console.log('network obj');
-    console.log(util.inspect(networkObj));
 
-    req.body = JSON.stringify({voterId: 'voter' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)});
-    let args = [req.body];
-    //connect to network and update the state with voterId  
+    const voterId = 'voter' + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
-    let invokeResponse = await network.invoke(networkObj, false, 'createVoter', args);
+    let invokeResponse = await registerVoter(networkObj, {voterId});
     
     if (invokeResponse.error) {
       res.send(invokeResponse.error);
@@ -124,32 +108,23 @@ app.post('/registerGroup', async (req, res) => {
   if (response.error) {
     res.send(response.error);
   } else {
-    console.log('req.body.ownerId');
-    console.log(req.body.ownerId);
-    // FIX WITH VOTER ID
-    let networkObj = await network.connectToNetwork(appAdmin);
-    console.log('networkobj: ');
+    const { ownerId, groupName } = req.body;
+    let networkObj = await fabric.connectToNetwork(appAdmin);
 
     if (networkObj.error) {
       res.send(networkObj.error);
     }
-    console.log('network obj');
-    console.log(util.inspect(networkObj));
+    if (ownerId === undefined || groupName === undefined) {
+      res.send('missing parameters');
+    }
 
-    req.body = JSON.stringify(req.body);
-    let args = [req.body];
-    console.log("args:")
-    console.log(args);
-    //connect to network and update the state with voterId  
+    let invokeResponse = await registerGroup(networkObj, {ownerId, groupName});
 
-    let invokeResponse = await network.invoke(networkObj, false, 'createGroup', args);
-    
     if (invokeResponse.error) {
       res.send(invokeResponse.error);
     } else {
-      console.log('after network.invoke ');
+      console.log('after network.invoke');
       res.send(invokeResponse);
-
     }
   }
 });
@@ -162,25 +137,12 @@ app.post('/addGroupMember', async (req, res) => {
   if (response.error) {
     res.send(response.error);
   } else {
-    console.log('req.body.newMemberId');
-    console.log(req.body.newMemberId);
-    // FIX WITH VOTER ID
-    let networkObj = await network.connectToNetwork(appAdmin);
-    console.log('networkobj: ');
-
+    let networkObj = await fabric.connectToNetwork(appAdmin);
     if (networkObj.error) {
       res.send(networkObj.error);
     }
-    console.log('network obj');
-    console.log(util.inspect(networkObj));
 
-    req.body = JSON.stringify(req.body);
-    let args = [req.body];
-    console.log("args:")
-    console.log(args);
-    //connect to network and update the state with voterId  
-
-    let invokeResponse = await network.invoke(networkObj, false, 'addGroupMember', args);
+    let invokeResponse = await addGroupMember(networkObj, req.body);
     
     if (invokeResponse.error) {
       res.send(invokeResponse.error);
@@ -203,7 +165,7 @@ app.post('/triggerActionsElection', async (req, res) => {
     console.log('req.body.electionId');
     console.log(req.body.electionId);
     // FIX WITH VOTER ID
-    let networkObj = await network.connectToNetwork(appAdmin);
+    let networkObj = await fabric.connectToNetwork(appAdmin);
     console.log('networkobj: ');
 
     if (networkObj.error) {
@@ -214,11 +176,11 @@ app.post('/triggerActionsElection', async (req, res) => {
 
     req.body = JSON.stringify(req.body);
     let args = [req.body];
-    console.log("args:")
+    console.log('args:');
     console.log(args);
     //connect to network and update the state with voterId  
 
-    let invokeResponse = await network.invoke(networkObj, false, 'triggerActionsElection', args);
+    let invokeResponse = await fabric.invoke(networkObj, false, 'triggerActionsElection', args);
     
     if (invokeResponse.error) {
       res.send(invokeResponse.error);
@@ -234,7 +196,7 @@ app.post('/triggerActionsElection', async (req, res) => {
 app.post('/validateVoter', async (req, res) => {
   console.log('req.body: ');
   console.log(req.body);
-  let networkObj = await network.connectToNetwork(req.body.voterId);
+  let networkObj = await fabric.connectToNetwork(req.body.voterId);
   console.log('networkobj: ');
   console.log(util.inspect(networkObj));
 
@@ -242,7 +204,7 @@ app.post('/validateVoter', async (req, res) => {
     res.send(networkObj);
   }
 
-  let invokeResponse = await network.invoke(networkObj, true, 'readMyAsset', req.body.voterId);
+  let invokeResponse = await readAsset(networkObj, { voterId: req.body.voterId });
   if (invokeResponse.error) {
     res.send(invokeResponse);
   } else {
@@ -263,11 +225,11 @@ app.post('/queryByKey', async (req, res) => {
   console.log('req.body: ');
   console.log(req.body);
 
-  let networkObj = await network.connectToNetwork(appAdmin);
+  let networkObj = await fabric.connectToNetwork(appAdmin);
   console.log('after network OBj');
-  let response = await network.invoke(networkObj, true, 'readMyAsset', req.body.key);
-  console.log(response);
+  let response = await queryByKey(networkObj, req.body.key);
   response = JSON.parse(response);
+  console.log({ response });
   if (response.error) {
     res.send({error: response.error});
   } else {
@@ -277,3 +239,24 @@ app.post('/queryByKey', async (req, res) => {
 
 
 app.listen(process.env.PORT || 8081, '0.0.0.0');
+
+const { SlashCreator, ExpressServer } = require('slash-create');
+
+const creator = new SlashCreator({
+  applicationID: '793781694673977385',
+  publicKey: 'bd62781454fb894f2f21a5e05e9eff99b418e5d198f524d88fa6ec47f46c2222',
+  token: 'NzkzNzgxNjk0NjczOTc3Mzg1.X-xQzw.IIbJbOdwkzV3U4IKu_nY2bgxVDo',
+  serverPort: 5555,
+});
+
+creator
+  // Registers all of your commands in the ./commands/ directory
+  .registerCommandsIn(path.join(__dirname, 'commands'))
+  // This will sync commands to Discord, it must be called after commands are loaded.
+  // This also returns itself for more chaining capabilities.
+  .syncCommands();
+
+creator
+  .withServer(new ExpressServer(app, { alreadyListening: true }));
+
+console.log(creator.commands);

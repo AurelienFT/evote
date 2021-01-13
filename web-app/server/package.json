@@ -17,6 +17,10 @@
     "fabric-client": "^1.4.10",
     "fabric-network": "~1.4.2",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "slash-create": "^1.3.0"
+  },
+  "devDependencies": {
+    "acorn": "^8.0.4"
   }
 }

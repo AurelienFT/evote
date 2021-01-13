@@ -57,7 +57,7 @@ class MyAssetContract extends Contract {
     //create the election
     let election = await new Election("Add " + args.newMemberId + " to " + group.name, startDate, endDate, group.groupId);
     let approve = await new VotableItem(ctx, "Add this member to the group", election.electionId);
-    let denied = await new VotableItem(ctx, "Don't add this member from the group", election.electionId);
+    let denied = await new VotableItem(ctx, "Do not add this member from the group", election.electionId);
     let votableItems = [];
     votableItems.push(approve);
     votableItems.push(denied);
@@ -102,22 +102,22 @@ class MyAssetContract extends Contract {
       return response;
     }
     let buffer = await ctx.stub.getState(args.electionId);
-    const election = JSON.parse(buffer.toString());
+    let election = JSON.parse(buffer.toString());
     if (election.triggered) {
       let response = {};
       response.error = `Election actions already triggered`;
       return response; 
     }
     //TODO: Make it be more general
-    buffer = await ctx.stub.getState(election.items[0]);
-    const yesItem = JSON.parse(buffer.toString());
-    buffer = await ctx.stub.getState(election.items[1]);
-    const noItem = JSON.parse(buffer.toString());
+    let bufferNo = await ctx.stub.getState(election.items[1]);
+    let noItem = JSON.parse(bufferNo.toString());
+    let bufferYes = await ctx.stub.getState(election.items[0]);
+    let yesItem = JSON.parse(bufferYes.toString());
     if (yesItem.count >= noItem.count) {
-      buffer = await ctx.stub.getState(election.groupId);
-      const group = JSON.parse(buffer.toString());
-      buffer = await ctx.stub.getState(election.memberToAdd);
-      const voter = JSON.parse(buffer.toString());
+      let bufferVoter = await ctx.stub.getState(election.memberToAdd);
+      let voter = JSON.parse(bufferVoter.toString());
+      let bufferGroup = await ctx.stub.getState(election.groupId);
+      let group = JSON.parse(bufferGroup.toString());
       group.membersId.push(election.memberToAdd);
       voter.groups.push(election.groupId);
       await ctx.stub.putState(voter.voterId, Buffer.from(JSON.stringify(voter)));

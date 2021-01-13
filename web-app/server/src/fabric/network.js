@@ -30,7 +30,7 @@ exports.connectToNetwork = async function (userName) {
   try {
     const walletPath = path.join(process.cwd(), 'wallet');
     const wallet = new FileSystemWallet(walletPath);
-/*     console.log(`Wallet path: ${walletPath}`);
+    /*     console.log(`Wallet path: ${walletPath}`);
     console.log('userName: ');
     console.log(userName);
 
